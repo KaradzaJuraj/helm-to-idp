@@ -334,26 +334,5 @@
       "type": "array"
     }
   },
-  "required": [
-    "replicaCount",
-    "image",
-    "imagePullSecrets",
-    "nameOverride",
-    "fullnameOverride",
-    "serviceAccount",
-    "podAnnotations",
-    "podLabels",
-    "podSecurityContext",
-    "securityContext",
-    "service",
-    "ingress",
-    "resources",
-    "autoscaling",
-    "volumes",
-    "volumeMounts",
-    "nodeSelector",
-    "tolerations",
-    "affinity"
-  ],
   "type": "object"
 }
