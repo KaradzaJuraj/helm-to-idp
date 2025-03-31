@@ -15,19 +15,17 @@
           "default": 100,
           "required": [],
           "title": "maxReplicas",
-          "type": "integer"
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 100
         },
         "minReplicas": {
           "default": 1,
           "required": [],
           "title": "minReplicas",
-          "type": "integer"
-        },
-        "targetCPUUtilizationPercentage": {
-          "default": 80,
-          "required": [],
-          "title": "targetCPUUtilizationPercentage",
-          "type": "integer"
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
         }
       },
       "required": [],
@@ -51,7 +49,9 @@
           "type": "string"
         }
       },
-      "required": [],
+      "required": [
+        "repository"
+      ],
       "title": "image",
       "type": "object"
     },
@@ -71,6 +71,8 @@
     },
     "replicaCount": {
       "default": 1,
+      "minimum": 1,
+      "maximum": 15,
       "required": [],
       "title": "replicaCount",
       "type": "integer"
@@ -85,10 +87,13 @@
           "type": "integer"
         },
         "type": {
-          "default": "ClusterIP",
-          "required": [],
           "title": "type",
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "ClusterIP",
+            "NodePort",
+            "LoadBalancer"
+          ]
         }
       },
       "required": [
@@ -109,7 +114,9 @@
           "type": "boolean"
         }
       },
-      "required": [],
+      "required": [
+        "replicaCount"
+      ],
       "title": "serviceAccount",
       "type": "object"
     }
