@@ -1,6 +1,6 @@
 # From Helm to an Internal Developer Platform
 
-This repository contains the Helm chart used in [this blog post]().
+This repository contains the Helm chart used in [this blog post](https://cyclops-ui.com/blog/2025/04/03/helm-to-idp-in-five).
 
 The `main` branch includes a default Helm chart generated using the `helm create` command.
 
